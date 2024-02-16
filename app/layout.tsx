@@ -1,3 +1,7 @@
+import { monserrat } from './ui/fonts';
+import './ui/global.css'
+
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +9,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${monserrat.className} antialiased`}>
+        {children}
+        <footer className='py-10 flex justify-center align-center'>
+          <h2>Esto aparecera en todas las rutas 🤷‍♂️</h2>
+        </footer>
+      </body>
     </html>
   );
 }
